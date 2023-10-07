@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Al Ferno Pizza's</title>
+    <meta name="description" content="This site is to order a pizza" />
+    <meta name="robots" content="noindex, nofollow" />
+    <!--adding our fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- adding our css file -->
+    <link rel="stylesheet" href=".css/styles.css" />
+  </head>
+  <body class="flex">
+    <header>
+      <!-- for logo -->
+      <div>
+        <a href="index.html"
+          ><img src="./img/7d3753ce1312f7df971957b45f63fd2f.jpg" alt="our logo"
+        /></a>
+      </div>
+      <nav>
+        <menu>
+          <h1>Online Order</h1>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./order.html">ORDER NOW</a></li>
+        </menu>
+      </nav>
+    </header>
+    <main class="size">
+      <form action="order_confirmation.php" method="post">
+        <label for="pizza_size">Select Pizza Size:</label>
+        <select id="pizza_size" name="pizza_size" required>
+          <option value="" disabled selected>Select Size</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+
+        <fieldset>
+          <legend>Choose Toppings:</legend>
+          <input
+            type="checkbox"
+            id="pepperoni"
+            name="toppings[]"
+            value="pepperoni"
+          />
+          <label for="pepperoni">Pepperoni</label><br />
+
+          <input
+            type="checkbox"
+            id="mushrooms"
+            name="toppings[]"
+            value="mushrooms"
+          />
+          <label for="mushrooms">Mushrooms</label><br />
+
+          <input type="checkbox" id="onions" name="toppings[]" value="onions" />
+          <label for="onions">Onions</label><br />
+        </fieldset>
+
+        <label for="delivery_address">Delivery Address:</label>
+        <textarea
+          id="delivery_address"
+          name="delivery_address"
+          rows="4"
+          cols="30"
+          required
+        ></textarea>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required />
+
+        <label>Choose Crust Type:</label>
+        <input type="radio" id="thin" name="crust" value="thin" />
+        <label for="thin">Thin</label>
+        <input type="radio" id="thick" name="crust" value="thick" />
+        <label for="thick">Thick</label>
+
+        <input type="submit" value="Place Order" />
+      </form>
+    </main>
+    <footer>
+      <nav>
+        <p>Follow us</p>
+        <p>Instagram:Al Ferno Pizza's</p>
+        <p>Facebook:Al Ferno Pizza's</p>
+        <p>Mail us:AlFernoPizzas@gmail.com</p>
+      </nav>
+    </footer>
+  </body>
+</html>
